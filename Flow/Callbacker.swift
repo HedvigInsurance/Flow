@@ -30,6 +30,9 @@ public final class Callbacker<Value> {
     deinit {
         mutex.deinitialize()
     }
+    
+    /// Called whenever a callback is added
+    public var didAddCallbacker: (() -> Void)?
 
     /// - Returns: True if no callbacks has been registered.
     public var isEmpty: Bool {
@@ -46,6 +49,8 @@ public final class Callbacker<Value> {
     /// Register a callback to be called when `callAll` is executed.
     /// - Returns: A `Disposable` to be disposed to unregister the callback.
     public func addCallback(_ callback: @escaping (Value) -> Void) -> Disposable {
+        didAddCallbacker?()
+        
         mutex.lock()
         defer { mutex.unlock() }
 
