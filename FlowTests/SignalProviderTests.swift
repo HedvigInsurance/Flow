@@ -36,7 +36,7 @@ class TickTrigger: SignalProvider {
 
     func start() {
         if let timer = self.timer {
-            RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
+            RunLoop.main.add(timer, forMode: RunLoop.Mode.default)
         }
     }
 
@@ -2143,6 +2143,23 @@ class SignalProviderTests: XCTestCase {
 
         XCTAssertEqual(p.value, 3)
         XCTAssertEqual(getCnt, 3)
+    }
+
+    func testRecursiveShared() {
+        let p = ReadWriteSignal(1).shared()
+        var results = [Int]()
+        let bag = DisposeBag()
+
+        bag += p.atOnce().enumerate().onValue { i, val in
+            results.append(val)
+            XCTAssertEqual(p.value, val) // Make sure value is up to date
+            if i == 0 {
+                p.value = 2
+            }
+        }
+
+        p.value = 3
+        XCTAssertEqual(results, [1, 2, 3])
     }
 
     func testSignalShared() {

@@ -10,6 +10,7 @@
 		215DEF311DEC365900CEB724 /* Recursive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215DEF301DEC365900CEB724 /* Recursive.swift */; };
 		215DEF371DEC368700CEB724 /* RecursiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215DEF351DEC367E00CEB724 /* RecursiveTests.swift */; };
 		21E1D41C1D9502A300A91CA0 /* Future+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E1D41B1D9502A300A91CA0 /* Future+Signal.swift */; };
+		5BE9055B3538F1DDAB424AD2 /* FutureAdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90C011B621BC2F0B9C1B8 /* FutureAdditionsTests.swift */; };
 		7484FA6B212D9E930076FD3E /* Signal+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7484FA6A212D9E930076FD3E /* Signal+Debug.swift */; };
 		8E890FC106FB7A89BD1727CC /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E890194B06CBB3311E44757 /* EitherTests.swift */; };
 		F610ABAE1D91743500A161AB /* Future+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F610ABA71D91743500A161AB /* Future+Additions.swift */; };
@@ -81,6 +82,7 @@
 		215DEF301DEC365900CEB724 /* Recursive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recursive.swift; path = Flow/Recursive.swift; sourceTree = SOURCE_ROOT; };
 		215DEF351DEC367E00CEB724 /* RecursiveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecursiveTests.swift; path = FlowTests/RecursiveTests.swift; sourceTree = SOURCE_ROOT; };
 		21E1D41B1D9502A300A91CA0 /* Future+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Future+Signal.swift"; path = "Flow/Future+Signal.swift"; sourceTree = SOURCE_ROOT; };
+		5BE90C011B621BC2F0B9C1B8 /* FutureAdditionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FutureAdditionsTests.swift; path = FlowTests/FutureAdditionsTests.swift; sourceTree = "<group>"; };
 		7484FA6A212D9E930076FD3E /* Signal+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Signal+Debug.swift"; path = "Flow/Signal+Debug.swift"; sourceTree = "<group>"; };
 		8E890194B06CBB3311E44757 /* EitherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherTests.swift; sourceTree = "<group>"; };
 		F610ABA61D91743500A161AB /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Future.swift; path = Flow/Future.swift; sourceTree = SOURCE_ROOT; };
@@ -303,6 +305,7 @@
 				F66835D32091C29C002D2676 /* UIViewSignalTests.swift */,
 				F6F679A220A966D1004C7AA7 /* EventListenerTests.swift */,
 				8E890194B06CBB3311E44757 /* EitherTests.swift */,
+				5BE90C011B621BC2F0B9C1B8 /* FutureAdditionsTests.swift */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -374,25 +377,25 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = iZettle;
 				TargetAttributes = {
 					F6D80B581BBBB2ED008F8574 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = G94FN7ACW4;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 					F6D80B621BBBB2ED008F8574 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = G94FN7ACW4;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = F6D80B531BBBB2ED008F8574 /* Build configuration list for PBXProject "Flow" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -513,6 +516,7 @@
 				F610ABBD1D91747000A161AB /* FutureQueueTests.swift in Sources */,
 				F610ABC11D91747000A161AB /* FutureUtilitiesTests.swift in Sources */,
 				8E890FC106FB7A89BD1727CC /* EitherTests.swift in Sources */,
+				5BE9055B3538F1DDAB424AD2 /* FutureAdditionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -588,6 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -653,13 +659,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=100";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iZettle.Flow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Debug;
@@ -679,13 +686,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=100";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iZettle.Flow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Release;
@@ -700,7 +708,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = "";
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvos appletvsimulator";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Debug;
@@ -715,7 +723,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = "";
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvos appletvsimulator";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Release;
