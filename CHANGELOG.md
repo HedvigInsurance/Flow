@@ -1,3 +1,16 @@
+# 1.8.3
+
+- Fix race conditions for iOS 13 for Signal and cleanup CallbackState<Value> 
+
+# 1.8.2
+
+- Fix the `traitCollectionWithFallback` behaviour on iOS 13 to return the view's predicted traits and prior iOS 13 to respect the key window's traits before falling back to the main screen traits.
+
+# 1.8.1
+
+- Added signal transformations `contains(where:)` and `allSatisfy(where:)` as wrappers for boolean `reduce()` transforms.
+- Changed `reduce()` implementation to consider initial values when performed on readable signals.
+
 # 1.8
 
 - Added `deallocSignal(for:)` and `NSObject.deallocSignal` for listen on deallocation of objects.
