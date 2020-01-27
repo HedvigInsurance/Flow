@@ -16,6 +16,7 @@
 		792AC15B227C8A6800F8BBAD /* SignalProviderTests+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AC15A227C8A6800F8BBAD /* SignalProviderTests+Internal.swift */; };
 		8E890FC106FB7A89BD1727CC /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E890194B06CBB3311E44757 /* EitherTests.swift */; };
 		DA6D58EF230E925700564CC1 /* MemoryUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D58EB230E918800564CC1 /* MemoryUtilsTests.swift */; };
+		EB37D08323DF1694009BB5EB /* Signal+Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB37D08223DF1694009BB5EB /* Signal+Disposable.swift */; };
 		F610ABAE1D91743500A161AB /* Future+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F610ABA71D91743500A161AB /* Future+Additions.swift */; };
 		F610ABB01D91743500A161AB /* FutureQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F610ABA91D91743500A161AB /* FutureQueue.swift */; };
 		F610ABB21D91743500A161AB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F610ABAB1D91743500A161AB /* Result.swift */; };
@@ -91,6 +92,7 @@
 		792AC15A227C8A6800F8BBAD /* SignalProviderTests+Internal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SignalProviderTests+Internal.swift"; path = "FlowTests/SignalProviderTests+Internal.swift"; sourceTree = "<group>"; };
 		8E890194B06CBB3311E44757 /* EitherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EitherTests.swift; path = FlowTests/EitherTests.swift; sourceTree = "<group>"; };
 		DA6D58EB230E918800564CC1 /* MemoryUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryUtilsTests.swift; path = FlowTests/MemoryUtilsTests.swift; sourceTree = "<group>"; };
+		EB37D08223DF1694009BB5EB /* Signal+Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Signal+Disposable.swift"; path = "Flow/Signal+Disposable.swift"; sourceTree = "<group>"; };
 		F610ABA61D91743500A161AB /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Future.swift; path = Flow/Future.swift; sourceTree = SOURCE_ROOT; };
 		F610ABA71D91743500A161AB /* Future+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Future+Additions.swift"; path = "Flow/Future+Additions.swift"; sourceTree = SOURCE_ROOT; };
 		F610ABA91D91743500A161AB /* FutureQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FutureQueue.swift; path = Flow/FutureQueue.swift; sourceTree = SOURCE_ROOT; };
@@ -217,6 +219,7 @@
 				F6B6A65E2056AEA400B9FC9D /* ReadSignal.swift */,
 				F6B6A6622056AF4300B9FC9D /* ReadWriteSignal.swift */,
 				F68EF3561FD590110001129C /* SignalProvider.swift */,
+				EB37D08223DF1694009BB5EB /* Signal+Disposable.swift */,
 				F66C47A820077BC700333410 /* Signal+Listeners.swift */,
 				F6FF03D81D926AC300B93771 /* Signal+Transforms.swift */,
 				F66C47A620077B2500333410 /* Signal+Combiners.swift */,
@@ -500,6 +503,7 @@
 				F699C483205C1A5C001378C0 /* Signal+Utilities.swift in Sources */,
 				F667FCD8200604570014DA7D /* Enablable.swift in Sources */,
 				F681B3481DB6566E00E44ABD /* Either.swift in Sources */,
+				EB37D08323DF1694009BB5EB /* Signal+Disposable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
