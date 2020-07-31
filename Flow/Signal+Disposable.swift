@@ -11,11 +11,24 @@ public extension CoreSignal {
     /// Returns a new signal that holds disposable until itself is disposed
     func hold(_ disposable: Disposable) -> CoreSignal<Kind, Value> {
         let signal = providedSignal
-        return CoreSignal(onEventType: { callback in
+        let refState = StateAndCallback(state: 0)
+
+        return CoreSignal(setValue: signal.setter, onEventType: { callback in
             let state = StateAndCallback(state: (), callback: callback)
 
-            state += disposable
-
+            refState.protect {
+                refState.val += 1
+            }
+            
+            state += Disposer {
+                refState.protect {
+                    refState.val -= 1
+                    if refState.val == 0 {
+                        disposable.dispose()
+                    }
+                }
+            }
+            
             state += signal.onEventType { eventType in
                 switch eventType {
                 case .initial(nil):
