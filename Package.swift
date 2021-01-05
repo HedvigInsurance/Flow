@@ -7,7 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "Flow",
-            type: .dynamic,
+            type: .static,
             targets: ["Flow"]),
     ],
     targets: [
