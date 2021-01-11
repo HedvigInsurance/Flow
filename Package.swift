@@ -8,10 +8,7 @@ let package = Package(
         .library(
             name: "Flow",
             type: .dynamic,
-            targets: ["Flow"]),
-        .library(
-            name: "Flow-Dynamic",
-            targets: ["Flow"]),
+            targets: ["Flow"])
     ],
     targets: [
         .target(
